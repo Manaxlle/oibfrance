@@ -1,0 +1,729 @@
+*  {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/*RESPONSIVE NAV BAR*/  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8hv;
+    background-color: #5D4954;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .logo {
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+
+ .nav-links li{
+    list-style: none;
+  }
+
+ .nav-links a {
+   color: rgb(226,226,226);
+   text-decoration: none;
+   letter-spacing: 3px;
+   font-weight: bold;
+   font-size: 14px;
+  }
+
+  .burger{
+    display: none;
+    cursor: pointer;
+}
+
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+}
+
+@media screen and (max-width:1024px){
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5D4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade{
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    opacity: 0;
+  }
+  .toggle .line3{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+
+/*========================END RESPONSIVE NAV BAR=======================*/
+
+/*========================RESPONSIVE HOME PAGE PHONE=======================*/
+
+
+.wrapper {
+  width: 100%;
+}
+
+.img-info{
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color : #000000;
+  font-family: 'Comfortaa';
+  padding: 1em;
+}
+
+h2 {
+  padding: 30px 30px 20px;
+  font-family: arial;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+}
+
+h3 {
+  padding: 30px 30px 20px;
+  font-family: arial;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+  text-align: center;
+}
+
+.img-info p {
+  padding: 0px 30px 20px;
+  font-family: arial;
+  font-size: 16px;
+  color: #111;
+  line-height: 24px;
+}
+
+.img-oib{
+  width: 100%;
+}
+
+
+  /* =============================== TABLETTE ================================*/
+
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+h2 {
+  padding: 20px 0px 0px;
+  }
+
+.img-info p {
+  padding: 20px 0px 0px;
+}
+  
+  .img-oib{
+  padding-top: 30px;
+}
+}
+
+
+  /* ============================== COMPUTER ================================*/
+
+@media only screen and (min-width: 1000px) {
+
+  .wrapper {
+    width: 1000px;
+  }
+
+  .img-info{
+    width: 50%;
+    float: right;
+  }
+  
+h2 {
+  padding: 20px 0px 0px 30px;
+}
+
+.img-info p {
+  padding: 20px 0px 0px 30px;
+}
+
+   .img-oib{
+    padding-top: 0px;
+    width: 50%;
+    float: left;
+  }
+  
+
+
+
+input:placeholder-shown {
+  text-align: center;
+}
+
+
+P.blocktext { 
+    margin: auto;
+	width: 75%;
+  	font-size: 1.5em;
+}
+/*========================END RESPONSIVE HOME PAGE=======================*/
+
+
+/*========================LOGIN FORM=======================*/
+
+div.login-box{
+  max-width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+    border-radius: 20px;
+  background:#cecece;
+  padding: 10px 20px 10px 20px;
+}
+
+.login-box-details  input[type=text], input[type=email], input[type=password]{
+  width: 250px;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  border-style:none;
+}
+
+.login-box-details input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+  background:#efefef;
+  border:2px solid gray;  
+}
+
+
+
+.login-box-details button[type=submit]{
+  background:#444444;
+    color:#ffffff;
+    text-align:center;
+    padding:15px 20px;
+    margin:5px;
+    margin-bottom:0;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+/*=====================SIGN UP FORM=====================*/
+
+div.signup-box{
+  max-width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+    border-radius: 20px;
+  background:#cecece;
+  padding: 10px 20px 10px 20px;
+}
+  
+/* ================== POLICES DE CARACTERE POUR LE TITRE DE CHARLOTTE ================================*/
+@font-face {
+    font-family: 'Comfortaa-Bold';
+    src: url('SKETCH/Comfortaa-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('SKETCH/Comfortaa-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ================== IMAGE CENTRE + CURSEUR ================================*/
+
+canvas.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  cursor:pointer;
+  }
+
+.stopFlottant {clear: both;}
+
+/*====================================TEXTE====================================================*/
+body {
+  color: #000000;
+  font-family: Palatino Linotype;
+}
+
+.enhaut{
+padding-top:0;
+margin-top:0;
+}
+
+
+h3 {
+  color : #000000;
+  font-family: 'Comfortaa';
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border: 0.5px solid #d6d6d6;
+}
+
+h5 {
+  color : #000000;
+  font-family: 'Comfortaa';
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border: 0.5px solid #d6d6d6;
+}
+
+
+P.textaccueil { 
+    text-align: center;
+    margin: auto;
+  width: 75%;
+    font-size: 1.5em;
+}
+
+P.textlogin{
+text-align: center;
+font-size:1em;
+}
+
+P.errormsg{
+margin-top:0;
+padding-top:0;
+text-align: center;
+font-size: 2em;
+color:#ff1919;
+margin-bottom:5px;
+}
+
+#questions{
+  margin-left: auto;
+    margin-right: auto;
+  width: 91%;
+  border: 1px solid #d6d6d6;
+  padding: 1%;
+}
+
+/*========================AUTRE=======================*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text2], select, textarea {
+    width: 50%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/*=====================FORMULAIRE==========================*/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text1], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.photo{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.collapsible1 {
+    background-color: #dbdbdb;
+    border-radius: 11px;
+    color: #444;
+    cursor: pointer;
+    padding: 8px;
+    width: 50%;
+    border : none;
+    transition: 0.4s;
+  text-align: center;
+  font-family:'Comfortaa-Bold';
+  height: 100px;
+  font-size: 1.3em;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(50%, 50%); /* décalage de 50% de sa propre taille */
+}
+.collapsible {
+    background-color: #dbdbdb;
+    border-radius: 11px;
+    color: #444;
+    cursor: pointer;
+    padding: 8px;
+    width: 70%;
+    border : none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-family:'Comfortaa-Bold';
+    height: 55px;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(25%, 25%); /* décalage de 50% de sa propre taille */
+}
+
+.container {
+    border-radius: 10px;
+    width:50%;
+    padding:2px 70px;	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+      background-color: #dbdbdb;
+}
+
+.content1 {
+    padding: 0 20px;
+    font-family: 'Palatino Linotype';
+    display: none;
+    overflow: hidden;
+    float: center;
+    width: 1000px;
+  margin: 0px auto;
+    background-color: #EFEFEF;
+  margin-top: 15px;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #3e8e41; /* Add a dark-grey background on hover */
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+/*====================================================================================================*/
+
+div.pane {
+  width: 1000px;
+  margin: 0px auto;
+}
+
+div.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+td.num-topics {
+  text-align: right;
+  margin: 0 0 0 auto;
+  float:right;
+}
+
+div.loginpane {
+  width: 230px;
+  display: block;
+  position: relative;
+  float: left;
+  padding: 15px;
+}
+
+div.forumdesc {
+  width: 700px;
+    text-align: right;
+}
+
+div.content {
+  background-color: #EFEFEF;
+  margin-top: 15px;
+  width: 970px;
+  padding: 15px;
+}
+
+div.content2 {
+  background-color: #EFEFEF;
+  margin-top: 15px;
+  width: 970px;
+  padding: 15px;
+    font-weight: bold;
+}
+
+div.header h1 {
+  margin-left: 15px;
+  font-family: Century Gothic;
+  font-weight: normal;
+}
+
+
+input[type="submit"], button {
+  border-radius: 4px;
+  width: 100px;
+  padding: 7px;
+  margin-top: 15px;
+  border: none;
+}
+
+input[type="text"],[type="password"] {
+  border-radius: 15px;
+  width: 200px;
+  padding: 7px;
+  font-family: Arial;
+  margin-top: 15px;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline-width: 0;
+  outline-style: none;
+}
+
+input[type="password"]:focus {
+  outline-width: 0;
+  outline-style: none;
+}
+  
+input[type="submit"]:focus {
+  outline-width: 0;
+  outline-style: none;
+}
+
+button:focus {
+  outline-width: 0;
+  outline-style: none;
+}  
+
+table.category-table {
+  width: 100%;
+  margin-bottom: 35px;
+  font-family: Calibri;
+}
+
+table.category-table td.main-category {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+table.category-table th {
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: left;
+}
+
+table.topic-table {
+  width: 100%;
+  font-family: Calibri;
+}
+
+table.topic-table th {
+  vertical-align: top;
+  text-align: left;
+  font-size: 12pt;
+  background-color: #8E8E8E;
+  padding: 4px;
+}
+
+table.topic-table td {
+  font-size: 12pt;
+  padding: 4px;
+}
+
+input#topic {
+  border-radius: 15px;
+  width: 350px;
+  padding: 7px;
+  font-family: Arial;
+  margin-top: 15px;
+  border: none;
+  background-color: #DFDFDF;
+}
+
+textarea {
+  width: 350px;
+  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+table.reply-table {
+  font-family: Calibri;
+  width: 100%;
+}
+
+table.reply-table th {
+  vertical-align: top;
+  text-align: left;
+  font-size: 12pt;
+}
+
+table.reply-table td {
+  padding-left: 15px;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+
+
+/*========================PIED DE PAGE=======================*/
+
+.footer-basic-centered{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+	bottom: 0;
+	padding: 45px;
+	margin-top: 80px;
+  	height: 15em;
+}
+
+
+.footer-basic-centered .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}
+/*========================FIN PIED DE PAGE=======================*/
+
+  /*NOUVELLE BARRE DE NAVIGATION*/
+
+
+
+
