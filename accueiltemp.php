@@ -27,7 +27,7 @@ session_start();
     <p  class="blocktext">Ce site a une vocation explicative de l'OIB - pour le moment en particulier pour la section américaine et la section anglaise. </p>
 	<p  class="blocktext">Il s'agit cependant surtout d'un forum où les élèves des différents établissements OIB - toutes sections confondues - peuvent échanger entre eux et avec des anciens élèves, notamment à propos de l'épreuve, du cursus, et des études supérieures.  </p> 
     </article> 
-   <img class="img-oib" src="img/oib.png" alt="Oib descriptif">
+   <img class="img-oib" src="oib.png" alt="Oib descriptif">
     </div>
   </body>
 
